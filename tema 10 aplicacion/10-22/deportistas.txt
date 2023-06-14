@@ -1,0 +1,7 @@
+Nombre        Edad     Peso    Altura
+Juan Pedro      25      70.5      1.82
+Ana Ruiz      23      60      1.75
+Pepe Perez      21      64      1.90
+Antonio Lopez      23      34      1.23
+Jose Antonio      12      76      8.00
+pp ee      12      32      12
