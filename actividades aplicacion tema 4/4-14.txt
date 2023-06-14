@@ -1,0 +1,21 @@
+static int segundos(int m, int h, int d){
+        int result;
+        result=(m*60)+(h*3600)+(d*3600*24);
+        return result;
+ }
+    /**	
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introducir nº Minutos ");
+        int m = sc.nextInt();
+        System.out.println("Introducir nº horas ");
+        int h = sc.nextInt();
+        System.out.println("Introducir nº dias ");
+        int d = sc.nextInt();
+        int s=segundos(m,h,d);
+        System.out.println("El número total de segundos en " + d + " días "+ h + ", horas " + m + " minutos, es: "+s);
+    }
+
+ 

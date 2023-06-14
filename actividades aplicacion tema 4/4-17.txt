@@ -1,0 +1,40 @@
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1, n2;
+        System.out.println("introduzca primer número");
+        n1 = sc.nextInt();
+        System.out.println("inroduzca segundo número");
+        n2 = sc.nextInt();
+        númeroAleatorioEnterosAmigos(n1, n2);
+    }
+ 
+    private static void númeroAleatorioEnterosAmigos(int primero, int segundo) {
+        int suma = 0;
+        for (int i = 1; i < primero; i++) {
+            if (primero % i == 0) {
+                suma = suma + i;
+            }
+        }
+        if (suma == segundo) {
+            suma = 0;
+            for (int i = 1; i < segundo && suma==primero; i++) {
+                 if (segundo % i == 0) {
+                    suma = suma + i;
+                }
+            }
+            if (suma == primero) {
+                System.out.println("son amigos ");
+
+            } else {
+                System.out.println("no son amigos");
+            }
+        } else {
+            System.out.println("no son amigos");
+        }
+    }
+}

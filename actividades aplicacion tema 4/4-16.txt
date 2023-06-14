@@ -1,0 +1,18 @@
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Escribe un numero: ");
+        int num = sc.nextInt();
+        System.out.println("Los divisores primos del numero " + num + " son: ");
+        divisoresPrimos(num);
+    }
+
+    static int divisoresPrimos(int num) {
+        int numOriginal = num;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                System.out.println("El numero " + i + " es un divisor primo de " + numOriginal);
+                num = num / i;
+            }
+        }
+        return num;
+    } 

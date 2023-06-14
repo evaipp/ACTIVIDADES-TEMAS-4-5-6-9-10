@@ -1,0 +1,32 @@
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("introduzca hora 1");
+        int hora1 = sc.nextInt();
+        System.out.println("introduzca hora 2");
+        int hora2 = sc.nextInt();
+        System.out.println("introduzca minuto 1");
+        int minuto1 = sc.nextInt();
+        System.out.println("introduzca minuto 2");
+        int minuto2 = sc.nextInt();
+        int diferencia = diferencia(hora1, hora2, minuto1, minuto2);
+        System.out.println("los minutos de diferencia son:" + diferencia);
+    }
+
+    static int diferencia(int hora1, int hora2, int minuto1, int minuto2) {
+        int minutosMayor, minutosMenor, minutosTotal1, minutosTotal2, minDiferencia;
+        minutosTotal1 = (hora1*60)+minuto1;
+        minutosTotal2 = (hora2*60)+minuto2;
+        if(minutosTotal1>minutosTotal2){
+            minutosMayor=minutosTotal1;
+            minutosMenor=minutosTotal2;
+            
+        }else{
+            minutosMayor=minutosTotal2;
+            minutosMenor=minutosTotal1;
+        }
+        minDiferencia=minutosMayor-minutosMenor;
+        return minDiferencia;
+    }
+}
+
+

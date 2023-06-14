@@ -1,0 +1,135 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+/**
+*
+* @author jlu
+*/
+public class AF4_20 {
+
+/**
+* @param args the command line arguments
+*/
+public static void main(String[] args) {
+// TODO code application 
+Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+int opcion;
+do {
+do {
+System.out.println("");
+System.out.println("____________MENU____________");
+System.out.println("1. Calcular area de un triangulo 
+System.out.println("2. Calcular letra DNI 
+System.out.println("3. Mostrar el ejercicio 4.19 de función sobrecargada.");
+System.out.println("4. Calcular la diferencia entre 2 instantes de tiempo.");
+System.out.println("0. Salir del programa");
+System.out.println("");
+System.out.print("Introducir opcion: ");
+opcion = sc.nextInt();
+
+switch (opcion) {
+case 1: {
+System.out.println("");
+System.out.println("Calcular area de un triangulo");
+System.out.print("Introducir la base: ");
+int base=sc.nextInt();
+System.out.print("Introducir la altura: ");
+int altura=sc.nextInt();
+f1(base,altura); //Invoca a Procedimiento que muestra un mensaje
+break;
+}
+case 2: {
+System.out.print("Introduce tu DNI: ");
+int n1=sc.nextInt();
+char c;
+c=letraDni(n1); // UTILIZAMOS LA FUNCION letraDni() 
+System.out.println("La letra es: "+c);
+break;
+}
+case 3:{
+System.out.println("Introducir cantidad de numeros aleatorios: ");
+int na=sc.nextInt();
+f1(na);
+System.out.println("LLamamos a la funcion con el parametro maximo y minimo");
+System.out.print("Introducir valor maximo: ");
+int max=sc.nextInt();
+System.out.print("Introducir valor minimo: ");
+int min=sc.nextInt();
+f1(na,max,min);
+break;
+}
+case 4: {
+System.out.println("4 Calcular la diferencia entre 2 instantes de tiempo.");
+System.out.println("Horas y minutos de dos instantes de tiempo");
+System.out.print("Introducir hora1: ");
+int h1=sc.nextInt();
+System.out.print("Introducir minutos1: ");
+int m1=sc.nextInt();
+System.out.print("Introducir hora2: ");
+int h2=sc.nextInt();
+System.out.print("Introducir minutos2: ");
+int m2=sc.nextInt();
+int d=diferencia(h1,m1,h2,m2); // Invoca a una funcion que devuelve un entero
+System.out.println("La diferencia es: "+d);
+break;
+}
+
+case 0: {
+System.out.println("");
+System.out.println("FIN DEL PROGRAMA");
+break;
+}
+default: {
+System.out.println("");
+System.out.println("La opcion introducida es incorrecta. Introduce del 1 al 4. 0 para salir");
+break;
+}
+}
+
+} while (opcion < 0 || opcion > 4);
+} while (opcion!=0);
+}
+static void f1(int a , int b){ // Procedimiento que devuelve un mensaje
+int area=a*b/2;
+System.out.println("El area es: "+area);
+}
+
+private static int diferencia(int h1, int m1, int h2, int m2) {
+int t1=m1+h1*60;
+int t2=m2+h2*60;
+int a=0; // variable auxiliar
+if (t1>t2){ a=t1; t1=t2; t2=a;} // forzamos a que t2 sea mayor que t1
+int r=t2-t1;
+return r;
+}
+
+private static char letraDni(int dni) {
+char c=' ';
+int resto = dni%22;
+switch (resto) {
+case 0: c='T';
+case 1: c='R';
+case 2: c='W';
+case 3: c='A';
+case 21: c='K';
+// Asi hasta 22
+}
+return (c);
+}
+
+private static void f1(int n) {
+for (int i=1; i<=n; i++){
+int nAleatorio=(int)(Math.random()*100+1);
+System.out.println(i+" Número aleatorio "+nAleatorio);
+}
+}
+
+private static void f1(int n, int max, int min) {
+for (int i=1; i<n; i++){
+int nAleatorio=(int)(Math.random()*(max-min+1)+min);
+System.out.println(i+" Número aleatorio "+nAleatorio);
+}
+}
+
+}
+

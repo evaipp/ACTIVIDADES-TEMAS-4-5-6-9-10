@@ -1,0 +1,20 @@
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // int a = 0;
+        System.out.println("primeros n números");
+        System.out.println("Introduce el número hasta el cual quieres que te muestre todos los números pares");
+        int a = sc.nextInt();
+        muestraPares(a);
+    }
+
+    private static void muestraPares(int a) {
+        for (int i = 2; i <= a; i++) {
+            if (i % 2 == 0) {
+                System.out.println("El numero " + i + " es PAR");
+            }
+        }
+    }
+}
+
+
+ 

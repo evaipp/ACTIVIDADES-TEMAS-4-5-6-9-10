@@ -1,0 +1,21 @@
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t1, t2;
+        System.out.println("hora1");
+        int hora1 = sc.nextInt();
+        System.out.println("min1");
+        int min1 = sc.nextInt();
+        System.out.println("hora2");
+        int hora2 = sc.nextInt();
+        System.out.println("min2");
+        int min2 = sc.nextInt();
+        t1 = hora1 * 60 + min1;
+        t2 = hora2 * 60 + min2;
+        int d1 = t2 - t1;
+        System.out.println("la diferencia es:" + d1);
+
+    }
+
+}
+
+ 

@@ -1,0 +1,22 @@
+ public static void main(String args[]){
+        // CONSTA LA VARIABLES
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        double x1, y1, x2, y2;
+        //GUARDAR LOS DOUBLES EN LAS VARIABLES PEDIDAS POR CONSOLA
+        System.out.println("Introduce x1: ");
+        x1 = sc.nextDouble();
+        System.out.println("Introduce y1: ");
+        y1 = sc.nextDouble();
+        System.out.println("Introduce x2: ");
+        x2 = sc.nextDouble();
+        System.out.println("Introduce y2: ");
+        y2 = sc.nextDouble();
+        double distanciaCalculada= distancia(x1, y1, x2, y2);
+        System.out.println("La distancia calculada por la funcion es "+ distanciaCalculada);
+    }
+    
+    public static double distancia(double x1, double y1, double x2, double y2){
+        double resultado=0.0;
+        resultado = Math.sqrt((Math.pow(x1-x2,2))+(Math.pow(y1-y2,2)));
+        return resultado;
+    }

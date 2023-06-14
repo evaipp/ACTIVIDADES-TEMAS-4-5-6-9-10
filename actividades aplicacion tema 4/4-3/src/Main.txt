@@ -1,0 +1,14 @@
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Introduzca radio: ");
+      double radio = sc.nextDouble();
+      System.out.print("Introduzca altura: ");
+      double alt = sc.nextDouble();
+      System.out.print("Qué desea calcular (1 (área)/ 2 (volumen): ");
+      int tipoCalculo = sc.nextInt();
+
+      System.out.println();
+      areaVolumenCilindro(radio, alt, tipoCalculo);
+   }
+}
+

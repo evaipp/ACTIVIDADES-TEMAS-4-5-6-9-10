@@ -1,0 +1,23 @@
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cantidad, minimo, maximo;
+        System.out.println("Indique la cantidad de numeros aletorios que desea que aparezcan ");
+        cantidad = sc.nextInt();
+        System.out.println("Introduzca el valor minimo que tendran estos numeros ");
+        minimo = sc.nextInt();
+        System.out.println("Introduzca el valor maximo que tendran estos numeros ");
+        maximo = sc.nextInt();
+        int aleatorio = aleatorios(cantidad, minimo, maximo);
+
+    }
+
+    private static int aleatorios(int cantidad, int minimo, int maximo) {
+        System.out.println("Los " + cantidad + " numeros aleatorios son: ");
+        for (int i = 1; i <= cantidad; i++) {            int random = (int) (Math.random() * (maximo - minimo + 1) + minimo);
+            //  for (int i= minimo; i<=maximo; i++){
+            System.out.println(random);
+        }
+        return 0;
+    }
+}
+

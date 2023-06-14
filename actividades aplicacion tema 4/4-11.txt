@@ -1,0 +1,19 @@
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in).useLocale(Locale.US);
+        System.out.print("Introduzca radio: ");
+        double radio = sc.nextDouble();
+        //System.out.println("Que desea calcular (1 (volumen) / 2 (superficie)): ");
+        //int tipoCalculo = sc.nextInt();
+       esfera (radio);
+    }
+    
+    // FUNCION
+    
+    static void esfera (double radio) {
+        double volumen=0.0, superficie=0.0;
+        volumen = ((4 * Math.PI) / 3) * (Math.pow(radio, 3));
+        System.out.println("El volumen de la esfera es: " + volumen);
+        superficie = (4 * Math.PI) * (Math.pow(radio, 2));
+        System.out.println("La superficie de la esfera es: " + superficie);
+    }
+
